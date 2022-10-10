@@ -6,5 +6,8 @@ public class Main {
         SalesManager managerEx2 = new SalesManager(new long[]{25, 88, 1000, -8, 0});
         System.out.println("for 25,88,1000,-8,0 max is: " + managerEx2.max());
         System.out.println("The average is: " + managerEx2.avg());
+        SalesManager managerEx3 = new SalesManager(new long[]{25, 25, 1000, 1000, 50});
+        System.out.println("for 25, 25, 1000, 1000, 50 max is: " + managerEx3.max());
+        System.out.println("The average is: " + managerEx3.avg());
     }
 }

@@ -6,7 +6,7 @@ public class SalesManager {
     }
 
     public long max() {
-        long max = -1;
+        long max = -1_999_999_999_999_999L;
         for (long sale : sales) {
             if (sale > max) {
                 max = sale;
@@ -28,15 +28,12 @@ public class SalesManager {
     public long avg() {
         long max = max();
         long min = min();
-        int i = 0;
         long sum = 0;
         for (long sale : sales) {
-            if (sale != max && sale != min) {
-                i++;
-                sum += sale;
-            }
+            sum += sale;
         }
-        long avg = sum / i;
+        sum = sum - max - min;
+        long avg = sum / (sales.length - 2);
         return avg;
     }
 }
